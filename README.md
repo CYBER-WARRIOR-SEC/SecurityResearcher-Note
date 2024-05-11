@@ -2,7 +2,7 @@
 ![image](https://github.com/LearningKijo/SecurityResearcher-Note/assets/120234772/f372dead-b41c-417a-8d10-f76cde1bcd32)
 
 
-### Welcome to @SecurityResearcher-Note
+### Welcome to @cyber warrior sec
 Dalam repositori ini, saya akan membahas berbagai pendekatan keamanan terhadap teknik serangan dan berbagi penemuan baru tentang pelanggaran keamanan. Melalui penemuan dan pembelajaran baru yang dibagikan dalam repositori ini, saya berharap dapat memberikan wawasan bermanfaat bagi mereka yang terlibat dalam operasi keamanan, perburuan, respons insiden, dan banyak lagi.
 
 1. [Security Research-Note](https://github.com/CYBER-WARRIOR-SEC/SecurityResearcher-Note/blob/main/README.md#security-research-note)
@@ -37,10 +37,10 @@ Dalam repositori ini, saya akan membahas berbagai pendekatan keamanan terhadap t
 | Day3 | [Day03-MDO-FileDetonation-DeepAnalysis.md](https://github.com/CYBER-WARRIOR-SEC/SecurityResearcher-Note/blob/main/ProductResearch-Note-Folder/Day03-MDO-FileDetonation-DeepAnalysis.md) | FileDetonation, DeepAnalysis |
 | Day4 | [Day04-MDI-DeploymentConsiderations.pdf](https://github.com/CYBER-WARRIOR-SEC/SecurityResearcher-Note/blob/main/ProductResearch-Note-Folder/Day04-MDI-DeploymentConsiderations.pdf) | ITDR, MDI |
 
-## Microsoft Copilot for Security, ***Kijo Catchup LOG***
+## Microsoft Copilot for Security, ***cyber warrior sec***
 | LOG    | Title | 
 |:-------|:------|
-| LOG-01 | [Microsoft Copilot for Securit / Update history](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/CopilotLOGs/01-CopilotForSecurity-History.md) | 
+| LOG-01 | [Microsoft Copilot for Securit / Update history](https://github.com/CYBER-WARRIOR-SEC/SecurityResearcher-Note/blob/main/CopilotLOGs/01-CopilotForSecurity-History.md) | 
 
 ## Other
 #### Microsoft Security Blog
