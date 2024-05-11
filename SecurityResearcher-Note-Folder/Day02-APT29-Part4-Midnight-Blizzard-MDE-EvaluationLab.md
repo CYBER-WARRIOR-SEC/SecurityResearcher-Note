@@ -1,81 +1,78 @@
-# Day 2 - APT29, Midnight Blizzard (NOBELIUM), Evaluation Lab
-> 📢 April 18, 2023 - Microsoft has changed its naming taxonomy for threat actors, moving away from using element symbols to using [weather-related names](https://www.microsoft.com/en-us/security/blog/2023/04/18/microsoft-shifts-to-a-new-threat-actor-naming-taxonomy/). APT29 attack was named Midnight Blizzard in Microsoft's new naming taxonomy for threat actors. In this blog, I will use the name "NOBELIUM" instead of Midnight Blizzard.
+# Hari 2 - APT29, Midnight Blizzard (NOBELIUM), Laboratorium Evaluasi
 
+📢 18 April 2023 - Microsoft telah mengubah taksonomi penamaan untuk pelaku ancaman, beralih dari menggunakan simbol unsur ke penggunaan [nama terkait cuaca](https://www.microsoft.com/en-us/security/blog/2023/04/18/microsoft-shifts-to-a-new-threat-actor-naming-taxonomy/). Serangan APT29 dinamai Midnight Blizzard dalam taksonomi penamaan baru Microsoft untuk pelaku ancaman. Dalam blog ini, saya akan menggunakan nama "NOBELIUM" sebagai gantinya daripada Midnight Blizzard.
 
-In Microsoft Defender for Endpoint's [Evaluation Lab(MDE)](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/evaluation-lab?view=o365-worldwid), Solorigate attack simulation(NOBELIUM) is covered. During this time, I will mainly focus on demonstrating MDE detection capabilities and how MDE captures the attack as EDR, XDR. Additionally, the available response capabilities of the product will be presented.
-
+Pada [Laboratorium Evaluasi Microsoft Defender for Endpoint (MDE)](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/evaluation-lab?view=o365-worldwid), simulasi serangan Solorigate (NOBELIUM) dicakup. Selama waktu ini, saya akan terutama fokus pada menunjukkan kemampuan deteksi MDE dan bagaimana MDE menangkap serangan sebagai EDR, XDR. Selain itu, kemampuan respons yang tersedia dari produk akan disajikan.
 
 ![image](https://user-images.githubusercontent.com/120234772/231689408-6805a007-69c2-46db-a834-f11e7a5d1870.png)
-> Solorigate in MDE Evaluation Lab
+> Solorigate di Laboratorium Evaluasi MDE
 
-## Incident response with Microsoft 365 Defender
-During incident response, there are various approaches and scenarios, and Microsoft offers comprehensive documentation on incident response for Microsoft 365 Defender. At this time, I would like to focus on **containment** and **investigation**, as highlighted in the blue line below:
+## Respons Insiden dengan Microsoft 365 Defender
+Selama respons insiden, ada berbagai pendekatan dan skenario, dan Microsoft menawarkan dokumentasi komprehensif tentang respons insiden untuk Microsoft 365 Defender. Pada saat ini, saya ingin fokus pada **penahanan** dan **investigasi**, seperti yang disorot dalam garis biru di bawah ini:
 ![image](https://user-images.githubusercontent.com/120234772/231698357-8ba1ef53-4c19-4ca8-9eba-0aba46681b06.png)
-> incident response workflow, [Incident response with Microsoft 365 Defender](https://learn.microsoft.com/en-us/microsoft-365/security/defender/incidents-overview?view=o365-worldwide)
+> alur kerja respons insiden, [Respons Insiden dengan Microsoft 365 Defender](https://learn.microsoft.com/en-us/microsoft-365/security/defender/incidents-overview?view=o365-worldwide)
 
+## Respons Insiden, Investigasi
 
-## Incident response, investigation
+### Mari kita teliti detail insiden tersebut
 
-### Let's investigate the details of the incident
+Berikut adalah beberapa poin penting yang perlu dipertimbangkan selama [investigasi](https://learn.microsoft.com/en-us/microsoft-365/security/defender/incidents-overview?view=o365-worldwide).
 
-Here are some important points to consider during [the investigation](https://learn.microsoft.com/en-us/microsoft-365/security/defender/incidents-overview?view=o365-worldwide).
+1. Di mana serangan dimulai.
+2. Taktik apa yang digunakan.
+3. Seberapa jauh serangan masuk ke dalam penyewa Anda.
+4. Ruang lingkup serangan, seperti berapa banyak perangkat, pengguna, dan kotak surat yang terdampak.
+5. Semua data yang terkait dengan serangan.
 
-1. Where the attack started.
-2. What tactics were used.
-3. How far the attack has gone into your tenant.
-4. The scope of the attack, such as how many devices, users, and mailboxes were impacted.
-5. All of the data associated with the attack.
+>**Catatan**: Saat memulai investigasi, penting untuk menavigasi ke **halaman insiden** daripada halaman peringatan. Hal ini karena bisa ada volume peringatan yang besar dan orang mungkin menjadi bingung atau tidak yakin dengan apa yang perlu mereka temukan.
 
->**Note** : When starting an investigation, it's important to navigate to **the incident page** instead of the alert page. This is because there can be a large volume of alerts and people may become lost or unsure of what they need to find.
-
-
-| [Summary] | Check points |
+| [Ringkasan] | Titik periksa |
 |:---|:---|
-| MITRE ATT&CK tactics | Analyze the full scope of attack using the MITRE ATT&CK framework. |
-| Scope | Check the impacted assets such as devices, users, mailboxes, and apps.|
-| Evidence | Ensure that any suspicious activities related to the incident are identified. |
-| Alerts | Check the timeline of those alerts. |
+| Taktik MITRE ATT&CK | Analisis cakupan penuh serangan menggunakan kerangka kerja MITRE ATT&CK. |
+| Ruang lingkup | Periksa aset yang terdampak seperti perangkat, pengguna, kotak surat, dan aplikasi.|
+| Bukti | Pastikan bahwa semua aktivitas mencurigakan terkait dengan insiden diidentifikasi. |
+| Peringatan | Periksa timeline dari peringatan-peringatan tersebut. |
 
-e.g. 
-At the time of the incident, I can see that 23 alerts are associated with it and [testmachine8] is an impacted device that requires action(containment) to be taken for incident response. In terms of suspicious activities, MDE has detected 31 entities.
+contoh: 
+Pada saat insiden terjadi, saya bisa melihat bahwa 23 peringatan terkait dengannya dan [testmachine8] adalah perangkat yang terdampak yang memerlukan tindakan (penahanan) untuk diambil dalam respons insiden. Dalam hal aktivitas mencurigakan, MDE telah mendeteksi 31 entitas.
 
 ![image](https://user-images.githubusercontent.com/120234772/231705669-82ce321d-d4c2-41df-ada8-43662ddf604d.png)
-> Summary, Incident page
+> Ringkasan, Halaman Insiden
 
-| [Attack story] | Check points |
+| [Kisah Serangan] | Titik periksa |
 |:----|:----|
-| Incident graph | Check how your assets are related to suspicious entities and activities using a graph.  |
-| Alerts (Timeline) | Check how many alerts associated with an incident, as well as the timeline of those alerts. | 
+| Grafik Insiden | Periksa bagaimana aset Anda terkait dengan entitas dan aktivitas mencurigakan menggunakan grafik.  |
+| Peringatan (Timeline) | Periksa berapa banyak peringatan yang terkait dengan insiden, serta timeline dari peringatan-peringatan tersebut. | 
 
-e.g. 
-In the attack timeline, since the alert started from "suspicious service launched," it's possible that the service may have created additional malicious files or even established a C2C connection. Also, when I examine the incident graph, I can see that testmachine8 is connected to 'panhardware.com' and related files and processes.
+contoh: 
+Dalam timeline serangan, sejak peringatan dimulai dari "layanan mencurigakan diluncurkan," mungkin layanan tersebut telah membuat file-file berbahaya tambahan atau bahkan membentuk koneksi C2C. Juga, saat saya memeriksa grafik insiden, saya bisa melihat bahwa testmachine8 terhubung ke 'panhardware.com' dan file serta proses terkait.
 
 ![image](https://user-images.githubusercontent.com/120234772/231706242-4623984f-8853-48e5-8e02-6e71c4ad3f91.png)
-> Attack story, Incident page
+> Kisah Serangan, Halaman Insiden
 
-### Let's look into the depth of the alert
-This is one of the alerts in the incident. The attack began from sbsimulator.exe and sbsimulation_sb_340461_bs_293713.exe created a file bdata.bin which was detected as malicious activities.
+### Mari kita teliti lebih dalam peringatan tersebut
+Ini adalah salah satu peringatan dalam insiden. Serangan dimulai dari sbsimulator.exe dan sbsimulation_sb_340461_bs_293713.exe membuat file bdata.bin yang terdeteksi sebagai aktivitas berbahaya.
 
 ![image](https://user-images.githubusercontent.com/120234772/231714249-885594bd-be8b-439a-a2e1-863dffd3b04a.png)
-> Alert story, Alert page
+> Kisah Peringatan, Halaman Peringatan
 
-Upon analyzing the timeline of the alert, it was found that all suspicious activities related to APT29 were captured on the device by MDE. I have summarized what the timeline is telling us.
+Setelah menganalisis timeline peringatan, ditemukan bahwa semua aktivitas mencurigakan terkait dengan APT29 tertangkap di perangkat oleh MDE. Saya telah merangkum apa yang memberitahu kita timeline tersebut.
 
 ![image](https://user-images.githubusercontent.com/120234772/233934128-8bb8670b-bccd-484e-90ce-6d4acf8fb79a.png)
 
+## Respons Insiden, Penahanan
+Terkait penahanan ***perangkat yang terdampak***, MDE memiliki kemampuan untuk secara remote mengisolasi jaringan dari perangkat.
+- [Isolasikan perangkat dari jaringan](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/respond-machine-alerts?view=o365-worldwide#isolate-dev
 
-## Incident response, containment
-Regarding containment of ***the impacted device***, MDE has the capability to remotely isolate the network from the device.
-- [Isolate devices from the network](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/respond-machine-alerts?view=o365-worldwide#isolate-devices-from-the-network)
-- [Contain devices from the network](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/respond-machine-alerts?view=o365-worldwide#contain-devices-from-the-network)
+ices-from-the-network)
+- [Batasan perangkat dari jaringan](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/respond-machine-alerts?view=o365-worldwide#contain-devices-from-the-network)
 
-Also, if ***the user account*** has an impact on the breach, then other response options are available.
-- [Reset user account password](https://learn.microsoft.com/en-us/defender-for-identity/remediation-actions)
-- [Disbale AD user / Azure AD user](https://learn.microsoft.com/en-us/defender-for-identity/remediation-actions)
-
+Juga, jika ***akun pengguna*** berdampak pada pelanggaran, maka opsi respons lainnya tersedia.
+- [Setel ulang kata sandi akun pengguna](https://learn.microsoft.com/en-us/defender-for-identity/remediation-actions)
+- [Nonaktifkan pengguna AD / pengguna Azure AD](https://learn.microsoft.com/en-us/defender-for-identity/remediation-actions)
 
 ![image](https://user-images.githubusercontent.com/120234772/231706957-6b6e2e71-ed9c-4d02-afbf-06a59f9c9825.png)
-> e.g. Isolate devices from the network 
+> contoh: Isolasikan perangkat dari jaringan 
 
-#### Disclaimer
-The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
+#### Penafian
+Pandangan dan pendapat yang dinyatakan di sini adalah milik penulis dan tidak selalu mencerminkan pandangan perusahaan.
