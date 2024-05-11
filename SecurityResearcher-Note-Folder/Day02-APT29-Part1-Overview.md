@@ -1,31 +1,31 @@
-# Day 2 - APT29 Overview
-While I am tracing back the history of the APT29 attack(YTTRIUM), I have a few questions, and I hope that these questions and my curiosity will help someone with their security incident response. Therefore, I will cover 4 points regarding APT29 attacks, which are as follows:
+# Hari 2 - Tinjauan APT29
+Sementara saya melacak sejarah serangan APT29 (YTTRIUM), saya memiliki beberapa pertanyaan, dan saya berharap pertanyaan-pertanyaan ini dan rasa ingin tahu saya akan membantu seseorang dengan respons insiden keamanan mereka. Oleh karena itu, saya akan membahas 4 poin mengenai serangan APT29, yang sebagai berikut:
 
-1. What is APT29 attack
-2. What is the main objective of APT29
-3. APT29 associated groups
-4. APT29 attack techniques
+1. Apa itu serangan APT29
+2. Apa tujuan utama dari APT29
+3. Kelompok terkait APT29
+4. Teknik serangan APT29
 
-### APT29 attack blogs 
-|# | Title| About|
+### Blog Serangan APT29 
+|# | Judul| Tentang|
 |:---|:---|:---|
-|1 | Day2-APT29-Overview.md  **<we are here !!>**| Talk about APT29 attack overview |
-|2 | [Day2-APT29-Part2-Midnight-Blizzard.md](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/SecurityResearcher-Note-Folder/Day2-APT29-Part2-Midnight-Blizzard.md)| Talk about APT29/Midnight-Blizzard(previously YTTRIUM)  |
-|3 | [Day2-APT29-Part3-Midnight-Blizzard.md](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/SecurityResearcher-Note-Folder/Day2-APT29-Part3-Midnight-Blizzard.md)| Talk about APT29/Midnight-Blizzard(previously NOBELIUM) |
-|4 | [Day2-APT29-Part4-Midnight-Blizzard-MDE-EvaluationLab.md](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/SecurityResearcher-Note-Folder/Day2-APT29-Part4-Midnight-Blizzard-MDE-EvaluationLab.md) | Talk about APT29/Midnight-Blizzard with demo|
+|1 | Hari2-Tinjauan-APT29.md  **<kami ada di sini !!>**| Membahas gambaran serangan APT29 |
+|2 | [Hari2-APT29-Bagian2-Blizzard-Tengah-Malam.md](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/SecurityResearcher-Note-Folder/Day2-APT29-Part2-Midnight-Blizzard.md)| Membahas APT29/Midnight-Blizzard(sebelumnya YTTRIUM)  |
+|3 | [Hari2-APT29-Bagian3-Blizzard-Tengah-Malam.md](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/SecurityResearcher-Note-Folder/Day2-APT29-Part3-Midnight-Blizzard.md)| Membahas APT29/Midnight-Blizzard(sebelumnya NOBELIUM) |
+|4 | [Hari2-APT29-Bagian4-Blizzard-Tengah-Malam-PenilaianLab-MDE.md](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/SecurityResearcher-Note-Folder/Day2-APT29-Part4-Midnight-Blizzard-MDE-EvaluationLab.md) | Membahas APT29/Midnight-Blizzard dengan demo|
 
-## What is APT29 attack ?
-APT29 (Advanced Persistent Threat 29), also known as Cozy Bear, is a cyber espionage group believed to be operating on behalf of the Russian government
-that has been involved in high-profile cyber attacks against various targets, including government agencies and critical infrastructure. The group is known for using advanced hacking techniques, such as spear phishing and zero-day exploits, as well as social engineering tactics. 
+## Apa itu serangan APT29 ?
+APT29 (Ancaman Persisten Lanjutan 29), juga dikenal sebagai Cozy Bear, adalah kelompok spionase cyber yang diyakini beroperasi atas nama pemerintah Rusia
+yang telah terlibat dalam serangan cyber berprofil tinggi terhadap berbagai target, termasuk lembaga pemerintah dan infrastruktur kritis. Kelompok ini dikenal karena menggunakan teknik peretasan canggih, seperti spear phishing dan eksploitasi zero-day, serta taktik rekayasa sosial. 
 
-## What is the main objective of APT29 ? 
-> What is the main objective of APT29 ? <br>
-> Is it to break the IT environment, obtain money, or steal personal information?
+## Apa tujuan utama dari APT29 ? 
+> Apa tujuan utama dari APT29 ? <br>
+> Apakah itu untuk merusak lingkungan IT, mendapatkan uang, atau mencuri informasi pribadi?
 
-Probably, the main objective of APT29, also known as Cozy Bear, is believed to be espionage and intelligence gathering for the Russian government. Their targets have included government entities, defense contractors, and research organizations, among others. While financial gain may be a secondary objective, their primary focus is on collecting sensitive information and intellectual property.
+Mungkin, tujuan utama APT29, juga dikenal sebagai Cozy Bear, diyakini adalah spionase dan pengumpulan intelijen untuk pemerintah Rusia. Target mereka telah termasuk entitas pemerintah, kontraktor pertahanan, dan organisasi penelitian, antara lain. Sementara keuntungan finansial mungkin menjadi tujuan sekunder, fokus utama mereka adalah mengumpulkan informasi sensitif dan kekayaan intelektual.
 
-## APT29 associated groups 
-There are several groups associated with APT29, and each group uses different attack techniques. 
+## Kelompok terkait APT29 
+Ada beberapa kelompok yang terkait dengan APT29, dan setiap kelompok menggunakan teknik serangan yang berbeda. 
 - IRON RITUAL
 - IRON HEMLOCK
 - NobleBaron
@@ -36,23 +36,23 @@ There are several groups associated with APT29, and each group uses different at
 - The Dukes 
 - Cozy Bear
 - CozyDuke.	
->**Note** : [MITRE ATT&CK | APT29 ](https://attack.mitre.org/groups/G0016/)
+>**Catatan** : [MITRE ATT&CK | APT29 ](https://attack.mitre.org/groups/G0016/)
 
-## APT29 attack techniques
-### The most common attack techniques 
-1. Spear-phishing emails
-2. Watering hole attacks
-3. Zero-day exploits
-4. Remote access tools <Gh0st RAT>
-5. Malware attacks <CozyDuke Hammertoss and SeaDuke>
+## Teknik serangan APT29
+### Teknik serangan yang paling umum 
+1. Email spear-phishing
+2. Serangan tempat minum
+3. Eksploitasi zero-day
+4. Alat akses jarak jauh <Gh0st RAT>
+5. Serangan malware <CozyDuke Hammertoss dan SeaDuke>
 
-Overall, APT29 is a highly sophisticated threat group that uses a combination of social engineering, advanced hacking techniques, and custom malware to gain access to target systems and steal sensitive information.
+Secara keseluruhan, APT29 adalah kelompok ancaman yang sangat canggih yang menggunakan kombinasi rekayasa sosial, teknik peretasan canggih, dan malware kustom untuk mendapatkan akses ke sistem target dan mencuri informasi sensitif.
 
-### MITRE ATT&CK APT29 attack map
-In the Cybereason blog, APT29 attack techniques are captured very well using the MITRE ATT&CK framework.
+### Peta serangan MITRE ATT&CK APT29
+Di blog Cybereason, teknik serangan APT29 ditangkap dengan sangat baik menggunakan kerangka MITRE ATT&CK.
   
 ![image](https://user-images.githubusercontent.com/120234772/231052172-59b042b9-996a-4539-b6f3-09f493ad936e.png)
-> APT29 Evaluation: Technique scope. Credit: MITRE ATT&CK, [Cybereason](https://www.cybereason.com/blog/understanding-the-mitre-attck-apt29-round-2-evaluation)
+> Evaluasi APT29: Ruang lingkup Teknik. Kredit: MITRE ATT&CK, [Cybereason](https://www.cybereason.com/blog/understanding-the-mitre-attck-apt29-round-2-evaluation)
   
-#### Disclaimer
-The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
+#### Penyangkalan
+Pandangan dan pendapat yang terdapat di dalam tulisan ini adalah milik penulis dan tidak selalu mencerminkan pandangan perusahaan.
