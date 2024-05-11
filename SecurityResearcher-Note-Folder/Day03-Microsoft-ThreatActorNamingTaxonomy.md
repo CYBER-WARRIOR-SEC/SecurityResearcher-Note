@@ -1,33 +1,34 @@
-# Day 3 - Microsoft, a threat actor naming taxonomy 
+# Hari 3 - Microsoft, taksonomi penamaan pelaku ancaman
+
 ![image](https://user-images.githubusercontent.com/120234772/233586114-ba90b790-81f2-4739-b5f6-cba034e4ddf1.png)
 
-### Why did Microsoft switch to using weather-themed names for threat actors?
-The threat landscape is constantly evolving, with the complexity, scale, and volume of threats increasing. As highlighted in [the blog](https://www.microsoft.com/en-us/security/blog/2023/04/18/microsoft-shifts-to-a-new-threat-actor-naming-taxonomy/), Microsoft Threat Intelligence community has tracked 300+ threat actors including 160 nation-state actors and 50 ransomware groups over a decade, discovering, tracking and identifying targeted malicious activity and sharing critical intelligence with customers. ***In order to provide better context and make it easier for security professionals to understand and prioritize threats***, Microsoft is adopting a new threat actor naming taxonomy based on weather.
+### Mengapa Microsoft beralih menggunakan nama berdasarkan cuaca untuk pelaku ancaman?
+Lanskap ancaman terus berkembang, dengan kompleksitas, skala, dan volume ancaman meningkat. Seperti yang disoroti dalam [blog](https://www.microsoft.com/en-us/security/blog/2023/04/18/microsoft-shifts-to-a-new-threat-actor-naming-taxonomy/), komunitas Intelijen Ancaman Microsoft telah melacak 300+ pelaku ancaman termasuk 160 aktor negara dan 50 kelompok ransomware selama satu dekade, menemukan, melacak, dan mengidentifikasi aktivitas jahat yang ditargetkan dan berbagi intelijen kritis dengan pelanggan. ***Untuk memberikan konteks yang lebih baik dan memudahkan profesional keamanan untuk memahami dan mengutamakan ancaman***, Microsoft mengadopsi taksonomi penamaan pelaku ancaman baru berdasarkan cuaca.
 
 ![image](https://user-images.githubusercontent.com/120234772/233846294-a4ae4e61-0fe3-4866-bfff-2de842d73ce5.png)
-> e.g. a threat actor naming taxonomy, [How Microsoft names threat actors](https://learn.microsoft.com/en-us/microsoft-365/security/intelligence/microsoft-threat-actor-naming?view=o365-worldwide)
+> contoh taksonomi penamaan pelaku ancaman, [Bagaimana Microsoft menamai pelaku ancaman](https://learn.microsoft.com/en-us/microsoft-365/security/intelligence/microsoft-threat-actor-naming?view=o365-worldwide)
 
-## The comprehensive map
-The comprehensive map is available from [here](https://download.microsoft.com/download/4/5/2/45208247-c1e9-432d-a9a2-1554d81074d9/microsoft-threat-actor-list.xlsx).
+## Peta komprehensif
+Peta komprehensif tersedia dari [sini](https://download.microsoft.com/download/4/5/2/45208247-c1e9-432d-a9a2-1554d81074d9/microsoft-threat-actor-list.xlsx).
 
 ![image](https://user-images.githubusercontent.com/120234772/233592868-e35ed554-c0bf-4688-9656-b74c3df7719b.png)
 
-## Threat Actor Insights
-In Threat Actor Insights, [Cybersecurity + Threat Intelligence | Security Insider](https://www.microsoft.com/en-us/security/business/security-insider/#office-ContentAreaHeadingTemplate-hkzu7ix) page, you can access advanced insights into threat actors, including their target industries, characteristics, detailed security reports, and more. 
+## Wawasan Pelaku Ancaman
+Di Wawasan Pelaku Ancaman, [Keamanan Siber + Intelijen Ancaman | Security Insider](https://www.microsoft.com/en-us/security/business/security-insider/#office-ContentAreaHeadingTemplate-hkzu7ix) halaman, Anda dapat mengakses wawasan lanjutan tentang pelaku ancaman, termasuk industri sasaran mereka, karakteristik, laporan keamanan rinci, dan lainnya.
 
 ![image](https://user-images.githubusercontent.com/120234772/233085458-3ab6f1ac-8dae-4cc3-bb57-ac121cc84e52.png)
-> Threat Actor Insights
+> Wawasan Pelaku Ancaman
 
 ![image](https://user-images.githubusercontent.com/120234772/233846054-0c658312-1fe3-49fe-9271-884338448be7.png)
-> Target industries, characteristics and so on
+> Industri sasaran, karakteristik, dan lain-lain
 
 ![image](https://user-images.githubusercontent.com/120234772/233846069-dba7baa8-09d2-498d-a549-efbf1adb356d.png)
-> Detailed security reports
+> Laporan keamanan rinci
 
-## Reference
-1. [How Microsoft names threat actors](https://learn.microsoft.com/en-us/microsoft-365/security/intelligence/microsoft-threat-actor-naming?view=o365-worldwide) (https://aka.ms/threatactors)
-2. [Microsoft shifts to a new threat actor naming taxonomy](https://www.microsoft.com/en-us/security/blog/2023/04/18/microsoft-shifts-to-a-new-threat-actor-naming-taxonomy/)
-3. [Cybersecurity + Threat Intelligence | Security Insider](https://www.microsoft.com/en-us/security/business/security-insider/#office-ContentAreaHeadingTemplate-hkzu7ix)
+## Referensi
+1. [Bagaimana Microsoft menamai pelaku ancaman](https://learn.microsoft.com/en-us/microsoft-365/security/intelligence/microsoft-threat-actor-naming?view=o365-worldwide) (https://aka.ms/threatactors)
+2. [Microsoft beralih ke taksonomi penamaan pelaku ancaman baru](https://www.microsoft.com/en-us/security/blog/2023/04/18/microsoft-shifts-to-a-new-threat-actor-naming-taxonomy/)
+3. [Keamanan Siber + Intelijen Ancaman | Security Insider](https://www.microsoft.com/en-us/security/business/security-insider/#office-ContentAreaHeadingTemplate-hkzu7ix)
 
-#### Disclaimer
-The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
+#### Penafian
+Pandangan dan pendapat yang dinyatakan di sini adalah milik penulis dan tidak selalu mencerminkan pandangan perusahaan.
