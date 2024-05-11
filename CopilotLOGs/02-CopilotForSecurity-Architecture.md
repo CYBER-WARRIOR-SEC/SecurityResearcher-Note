@@ -1,38 +1,36 @@
-# Microsoft Copilot for Security : LOG-02
-At first, we might have heard these key terms, Generative AI, OpenAI, ChatGPT, and Copilot, over the past year. 
-Let's figure them out... I've understood their differences by using MS Docs and by asking ChatGPT and Copilot.
-- [x] Generative AI : Class of artificial intelligence models that can generate new content, such as text, images, or music, based on patterns learned from existing data.
-- [x] OpenAI : Research organization that develops AI models, including ChatGPT.
-- [x] ChatGPT : Specific AI model developed by OpenAI for chatting and conversation.
-- [x] Microsoft Copilot for Security : Generative AI-powered security solution that helps increase the efficiency and capabilities of defenders to improve security outcomes at machine speed and scale, while remaining compliant to responsible AI principles.
-> Source :
-> [What is Microsoft Security Copilot?](https://learn.microsoft.com/en-us/security-copilot/microsoft-security-copilot), [ChatGPT](https://openai.com/blog/chatgpt), Copilot
+# Microsoft Copilot untuk Keamanan: LOG-02
+Pertama-tama, mungkin kita telah mendengar istilah kunci ini, Generative AI, OpenAI, ChatGPT, dan Copilot, selama setahun terakhir. Mari kita pahami... Saya telah memahami perbedaan mereka dengan menggunakan MS Docs dan dengan bertanya kepada ChatGPT dan Copilot.
+- [x] Generative AI : Kelas model kecerdasan buatan yang dapat menghasilkan konten baru, seperti teks, gambar, atau musik, berdasarkan pola yang dipelajari dari data yang ada.
+- [x] OpenAI : Organisasi riset yang mengembangkan model-model AI, termasuk ChatGPT.
+- [x] ChatGPT : Model AI spesifik yang dikembangkan oleh OpenAI untuk obrolan dan percakapan.
+- [x] Microsoft Copilot untuk Keamanan : Solusi keamanan yang didukung oleh Generative AI yang membantu meningkatkan efisiensi dan kemampuan para pembela untuk meningkatkan hasil keamanan dengan kecepatan dan skala mesin, sambil tetap mematuhi prinsip-prinsip AI yang bertanggung jawab.
+> Sumber :
+> [Apa itu Microsoft Security Copilot?](https://learn.microsoft.com/en-us/security-copilot/microsoft-security-copilot), [ChatGPT](https://openai.com/blog/chatgpt), Copilot
 
-
-## Core Engines
-As far as I know, Microsoft Copilot for Security counts on two big pillar.
-- GPT4 model from OpenAI 
-- Microsoft-developed security model.
-  - Global threat intelligence (More than 65 trillion daily signals)
-  - Microsoft Security products (Plugins)
-  - Third-party security products (Plugins)
+## Mesin Inti
+Sejauh yang saya ketahui, Microsoft Copilot untuk Keamanan mengandalkan dua pilar besar.
+- Model GPT4 dari OpenAI 
+- Model keamanan yang dikembangkan oleh Microsoft.
+  - Intelejen ancaman global (Lebih dari 65 triliun sinyal harian)
+  - Produk Keamanan Microsoft (Plugin)
+  - Produk keamanan pihak ketiga (Plugin)
 
 ![image](https://github.com/LearningKijo/SecurityResearcher-Note/assets/120234772/4c3331c6-6fb5-437a-beaa-a762db516453)
-> The infographic is available from [Microsoft Copilot for Security | Microsoft Security](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security)
+> Infografis tersedia dari [Microsoft Copilot untuk Keamanan | Microsoft Security](https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-copilot-security)
 
-## Architecture
-This is a high-level architecture diagram illustrating how Security Copilot works. 
+## Arsitektur
+Ini adalah diagram arsitektur tingkat tinggi yang menggambarkan bagaimana Security Copilot bekerja.
 
 ![image](https://github.com/LearningKijo/SecurityResearcher-Note/assets/120234772/eeea60a3-92e8-4ba9-b2ea-c756fa7fb75d)
-> The graph is available from Microsoft Docs - [What is Microsoft Security Copilot?](https://learn.microsoft.com/en-us/security-copilot/microsoft-security-copilot)
+> Grafik tersedia dari Dokumen Microsoft - [Apa itu Microsoft Security Copilot?](https://learn.microsoft.com/en-us/security-copilot/microsoft-security-copilot)
 
-I came across some new words and looked up their meanings.
-- [x] Azure OpenAI : Azure OpenAI Service provides REST API access to OpenAI's powerful language models including the GPT-4, GPT-4 Turbo with Vision, GPT-3.5-Turbo, and Embeddings model series. 
-- [x] LLM : Large Language Model (LLM) is a sophisticated AI system trained on vast amounts of text data to understand and generate human-like language across various tasks.
-- [x] Responsible AI : Approach to developing, assessing, and deploying AI systems in a safe, trustworthy, and ethical way. 
+Saya menemukan beberapa kata baru dan mencari arti mereka.
+- [x] Azure OpenAI : Layanan Azure OpenAI menyediakan akses API REST ke model-model bahasa kuat OpenAI termasuk seri model GPT-4, GPT-4 Turbo dengan Vision, GPT-3.5-Turbo, dan Embeddings.
+- [x] LLM : Large Language Model (LLM) adalah sistem AI yang canggih dilatih pada jumlah data teks yang besar untuk memahami dan menghasilkan bahasa yang mirip manusia di berbagai tugas.
+- [x] Responsible AI : Pendekatan untuk mengembangkan, menilai, dan mendeploy sistem AI secara aman, dapat dipercaya, dan etis.
 
-> Source :
-> [What is Azure OpenAI Service?](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview), [What is Responsible AI?](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai?view=azureml-api-2), [ChatGPT](https://openai.com/blog/chatgpt)
+> Sumber :
+> [Apa itu Layanan Azure OpenAI?](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview), [Apa itu Responsible AI?](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai?view=azureml-api-2), [ChatGPT](https://openai.com/blog/chatgpt)
 
-#### Disclaimer
-The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
+#### Penyangkalan
+Pandangan dan opini yang terdapat di sini adalah milik penulis dan tidak selalu mencerminkan pandangan perusahaan.
