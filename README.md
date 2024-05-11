@@ -3,7 +3,7 @@
 
 
 ### Welcome to @SecurityResearcher-Note
-In this repository, I will cover various security approaches to attack techniques and share new discoveries about security breaches. Through the new discoveries and learnings shared in this repository, I hope to provide helpful insights  for those involved in security operations, hunting, incident response, and more.
+Dalam repositori ini, saya akan membahas berbagai pendekatan keamanan terhadap teknik serangan dan berbagi penemuan baru tentang pelanggaran keamanan. Melalui penemuan dan pembelajaran baru yang dibagikan dalam repositori ini, saya berharap dapat memberikan wawasan bermanfaat bagi mereka yang terlibat dalam operasi keamanan, perburuan, respons insiden, dan banyak lagi.
 
 1. [Security Research-Note](https://github.com/LearningKijo/SecurityResearcher-Note#security-research-note)
 2. [Product Research-Note](https://github.com/LearningKijo/SecurityResearcher-Note#product-research-note)
