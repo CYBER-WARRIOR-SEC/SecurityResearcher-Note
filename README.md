@@ -51,7 +51,3 @@ Dalam repositori ini, saya akan membahas berbagai pendekatan keamanan terhadap t
 - November 8 2023, [Advanced Hunting & Data visualization in Microsoft 365 Defender](https://www.youtube.com/watch?v=2jSqr-nzWn8&ab_channel=MicrosoftSecurityCommunity)
 - November 8 2023, [The Virtual Ninja Show | Season 6 Episode 2](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/the-virtual-ninja-show-season-6-episode-2/ev-p/3969120)
 
-![image](https://github.com/LearningKijo/SecurityResearcher-Note/assets/120234772/64097aa2-092d-464b-b879-2e2ce26d56d5)
-
-#### Disclaimer
-The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
