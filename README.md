@@ -32,10 +32,10 @@ Dalam repositori ini, saya akan membahas berbagai pendekatan keamanan terhadap t
 ## Product Research-Note
 | Day  | Title | Comment |
 |:-----|:------|:--------|
-| Day1 | [Day01-MDE-MDI-BetterTogether-Part1.md](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/ProductResearch-Note-Folder/Day01-MDE-MDI-BetterTogether-Part1.md) | Reconnaissance, SAMR | 
-| Day2 | [Day02-MDE-MDI-BetterTogether-Part2.md](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/ProductResearch-Note-Folder/Day02-MDE-MDI-BetterTogether-Part2.md) | Reconnaissance, SMB, LDAP |
-| Day3 | [Day03-MDO-FileDetonation-DeepAnalysis.md](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/ProductResearch-Note-Folder/Day03-MDO-FileDetonation-DeepAnalysis.md) | FileDetonation, DeepAnalysis |
-| Day4 | [Day04-MDI-DeploymentConsiderations.pdf](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/ProductResearch-Note-Folder/Day04-MDI-DeploymentConsiderations.pdf) | ITDR, MDI |
+| Day1 | [Day01-MDE-MDI-BetterTogether-Part1.md](https://github.com/CYBER-WARRIOR-SEC/SecurityResearcher-Note/blob/main/ProductResearch-Note-Folder/Day01-MDE-MDI-BetterTogether-Part1.md) | Reconnaissance, SAMR | 
+| Day2 | [Day02-MDE-MDI-BetterTogether-Part2.md](https://github.com/CYBER-WARRIOR-SEC/SecurityResearcher-Note/blob/main/ProductResearch-Note-Folder/Day02-MDE-MDI-BetterTogether-Part2.md) | Reconnaissance, SMB, LDAP |
+| Day3 | [Day03-MDO-FileDetonation-DeepAnalysis.md](https://github.com/CYBER-WARRIOR-SEC/SecurityResearcher-Note/blob/main/ProductResearch-Note-Folder/Day03-MDO-FileDetonation-DeepAnalysis.md) | FileDetonation, DeepAnalysis |
+| Day4 | [Day04-MDI-DeploymentConsiderations.pdf](https://github.com/CYBER-WARRIOR-SEC/SecurityResearcher-Note/blob/main/ProductResearch-Note-Folder/Day04-MDI-DeploymentConsiderations.pdf) | ITDR, MDI |
 
 ## Microsoft Copilot for Security, ***Kijo Catchup LOG***
 | LOG    | Title | 
