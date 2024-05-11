@@ -1,63 +1,55 @@
-# Day 4 - Mango Sandstorm Attack techniques & insights
+## 7 April 2023, Mango Sandstorm
 
-While I am tracing back the history of Mango Sandstorm, formerly known as MERCURY, I have a few questions, and I hope that these questions and my curiosity will help someone with their security incident response.
+#### Ringkasan Singkat
 
-|#|Title|About|
-|:---|:---|:---|
-| Part 1 | [Day4-Mango-Sandstorm-Part1-Overview.md](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/SecurityResearcher-Note-Folder/Day4-Mango-Sandstorm-Part1-Overview.md)   | Mango Sandstorm overview |
-| Part 2 | [ Day4-Mango-Sandstorm-Part2-AttackTechniques-Insights.md](https://github.com/LearningKijo/SecurityResearcher-Note/blob/main/SecurityResearcher-Note-Folder/Day4-Mango-Sandstorm-Part2-AttackTechniques-Insights.md)  |August 25, 2022, Mango Sandstorm |
-| Part 3 | Day4-Mango-Sandstorm-Part3-AttackTechniques-Insights.md |April 7, 2023, Mango Sandstorm & Storm-1084 |
-
-## April 7, 2023, Mango Sandstorm
-
-#### Short Summary
-
-Mango Sandstorm, previously known for using Log4j 2 exploits and targeting on-premises environments, has now expanded its focus to include both on-premises and cloud environments. After gaining initial access through known vulnerabilities, the attack has been linked to Storm-1084 (formerly known as DEV-1084).
+Mango Sandstorm, sebelumnya dikenal karena menggunakan eksploitasi Log4j 2 dan menargetkan lingkungan on-premise, sekarang telah memperluas fokusnya untuk termasuk kedua lingkungan on-premise dan cloud. Setelah mendapatkan akses awal melalui kerentanan yang diketahui, serangan ini dikaitkan dengan Storm-1084 (sebelumnya dikenal sebagai DEV-1084).
 
 ![image](https://github.com/LearningKijo/SecurityResearcher-Note/assets/120234772/ee623697-5a31-48fe-933a-85fa360ef3c1)
 
 > [!Note]
-> [MERCURY and DEV-1084: Destructive attack on hybrid environment](https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/)
+> [MERCURY dan DEV-1084: Serangan destruktif pada lingkungan hibrid](https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/)
 
 
-#### How has Mango Sandstorm changed compared to its previous activities?
-Previously, Mango Sandstorm was observed primarily in on-premise environments. However, they have now expanded their activities to include ***cloud environments*** as well. 
-Additionally, there is strong suspicion that  Mango Sandstorm is linked to ***Storm-1084***, according to Microsoft.
+#### Bagaimana Mango Sandstorm berubah dibandingkan dengan aktivitas sebelumnya?
+Sebelumnya, Mango Sandstorm terutama diamati dalam lingkungan on-premise. Namun, sekarang mereka telah memperluas aktivitas mereka untuk termasuk ***lingkungan cloud*** juga. 
+Selain itu, ada kecurigaan kuat bahwa Mango Sandstorm terkait dengan ***Storm-1084***, menurut Microsoft.
 
 
-####  What is Storm-1084?
-According to Microsoft, DEV-1084 publicly adopted the DarkBit persona and presented itself as a criminal actor interested in extortion. 
-This was likely done as an attempt to obfuscate Iran's link to and strategic motivation for the attack.
+#### Apa itu Storm-1084?
+Menurut Microsoft, DEV-1084 secara publik mengadopsi persona DarkBit dan menyatakan diri sebagai pelaku kriminal yang tertarik pada pemerasan. 
+Hal ini kemungkinan dilakukan sebagai upaya untuk menyembunyikan keterkaitan Iran dengan dan motivasi strategis untuk serangan.
 > [!Note]
-> DarkBit - a new ransomware
+> DarkBit - sebuah ransomware baru
 
-#### Are there any evidences linking Storm-1084 to Mango Sandstorm?
-- The email's IP address (146.70.106[.]89) is linked to Mango Sandstorm.
-- Both were observed to use the same VPN service.
-- Both were observed to use the same tools such as Rport and Ligolo.
-- vatacloud[.]com, the command and control, used by Storm-1084, is controlled by Mango Sandstorm.
+#### Apakah ada bukti yang menghubungkan Storm-1084 ke Mango Sandstorm?
+- Alamat IP email (146.70.106[.]89) terhubung ke Mango Sandstorm.
+- Keduanya terlihat menggunakan layanan VPN yang sama.
+- Keduanya terlihat menggunakan alat yang sama seperti Rport dan Ligolo.
+- vatacloud[.]com, pusat komando dan kontrol yang digunakan oleh Storm-1084, dikendalikan oleh Mango Sandstorm.
 
-#### How do they conduct attacks on on-premise environments?
-The initial access and lateral movement techniques employed in this attack are similar to the previous Mango Sandstorm technique. 
-The attackers compromised the on-premise environment by leveraging Group Policy Objects (GPOs) to ***disable security tools like antivirus.***
-They also used GPO to ***create a scheduled task for delivering ransomware.*** The ransomware payload was placed in the NETLOGON shares on domain controllers. 
-Ultimately, the attackers encrypted files on targeted devices and left ransom notes.
+#### Bagaimana mereka melakukan serangan pada lingkungan on-premise?
+Teknik akses awal dan pergerakan lateral yang digunakan dalam serangan ini mirip dengan teknik Mango Sandstorm sebelumnya. 
+Para penyerang mengompromikan lingkungan on-premise dengan memanfaatkan Objek Kebijakan Grup (GPOs) untuk ***menonaktifkan alat keamanan seperti antivirus.***
+Mereka juga menggunakan GPO untuk ***membuat tugas terjadwal untuk pengiriman ransomware.*** Payload ransomware ditempatkan di share NETLOGON pada pengontrol domain. 
+Pada akhirnya, para penyerang mengenkripsi file pada perangkat yang ditargetkan dan meninggalkan catatan tebusan.
 
-#### What types of attacks were conducted in the cloud environment?
-- Email impersonation
-- Email dump using Exchange Web Server API
-- Mass Azure resources deletion
+#### Jenis serangan apa yang dilakukan dalam lingkungan cloud?
+- Pemalsuan email
+- Dump email menggunakan Exchange Web Server API
+- Penghapusan massa sumber daya Azure
 
-## KQL : IoCs-Based Threat Hunting
-Here is an out-of-the-box KQL query to hunt for Mango SandStorm with Storm-1084. IOCs are available from Microsoft blog - [MERCURY and DEV-1084: Destructive attack on hybrid environment](https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/).
-#### IOCs csv file : [MangoSandstorm-Storm-1084-IOCs-042023.csv](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/ThreatHunting/IOCs-Folder/MangoSandstorm-Storm-1084-IOCs-042023.csv)
+## KQL: Pencarian Ancaman Berbasis IoCs
+Berikut adalah kueri KQL yang siap pakai untuk memburu Mango SandStorm dengan Storm-1084. IoCs tersedia dari blog Microsoft - [MERCURY dan DEV-1084: Serangan destruktif pada lingkungan hibrid](https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/).
+#### File csv IoCs: [MangoSandstorm-Storm-1084-IOCs-042023.csv](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/ThreatHunting/IOCs-Folder/MangoSandstorm-Storm-1084-IOCs-042023.csv)
 ```kql
 // IoCs - MERCURY and DEV-1084: Destructive attack on hybrid environment
 let MangoSandstorm = externaldata(Indicator:string, Type:string, Description:string)
 [@'https://raw.githubusercontent.com/LearningKijo/KQL/main/KQL-XDR-Hunting/ThreatHunting/IOCs-Folder/MangoSandstorm-Storm-1084-IOCs-042023.csv'] with (format='csv', ignorefirstrecord = true);
 let Domains = (MangoSandstorm | where Type == "Domain"| project Indicator);
 let IPaddress = (MangoSandstorm | where Type == "IP address"| project Indicator);
-let SHA256hash = (MangoSandstorm | where Type == "SHA-256"| project Indicator);
+let SHA256hash = (MangoSandstorm | where
+
+ Type == "SHA-256"| project Indicator);
 (union isfuzzy=true
 (DeviceNetworkEvents
 | where Timestamp > ago(1d)
@@ -82,5 +74,5 @@ let SHA256hash = (MangoSandstorm | where Type == "SHA-256"| project Indicator);
 )
 ```
 
-#### Disclaimer
-The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
+#### Penafian
+Pandangan dan pendapat yang dinyatakan di sini adalah milik penulis dan tidak selalu mencerminkan pandangan perusahaan.
